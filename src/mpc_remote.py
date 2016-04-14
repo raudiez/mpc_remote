@@ -36,7 +36,6 @@ while True:
 	  		playing=True
 	  	os.system(CMD_MPC_PREV)
 	  if button[0] == "KEY_PLAYPAUSE" and mpc_mode:
-	  	chk_playing_status()
 	  	if playing:
 	  		os.system(CMD_MPC_PAUSE)
 	  		playing=False
