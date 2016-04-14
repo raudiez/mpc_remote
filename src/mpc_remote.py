@@ -7,11 +7,10 @@ CMD_MPC_PAUSE="mpc pause"
 CMD_MPC_PLAY="mpc play"
 CMD_MPC_PREV="mpc prev"
 CMD_MPC_NEXT="mpc next"
-
-sockid = lirc.init("mpd_remote", blocking=False)
-
 playing = False
 mpc_mode = False
+
+sockid = lirc.init("mpd_remote", blocking=False)
 
 def chk_playing_status():
 	global playing
