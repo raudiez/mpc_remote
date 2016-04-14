@@ -1,2 +1,2 @@
 # mpc_remote
-Simply python script to control MPC with a LIRC remote in a Raspberry Pi.
+Simply Python script to control MPC with a LIRC remote, for OSMC (Raspberry Pi) Linux distribution.
