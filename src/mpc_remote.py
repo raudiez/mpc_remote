@@ -23,7 +23,6 @@ def chk_playing_status():
 chk_playing_status()
 while True:
 	try:
-	  global playing
 	  button = lirc.nextcode()
 	  if len(button) == 0: continue
 	  if button[0] == "KEY_NEXT" and mpc_mode:
