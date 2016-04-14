@@ -1,0 +1,11 @@
+
+Description=MPC Remote Daemon
+DefaultDependencies=no
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python /usr/bin/mpc_remote.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

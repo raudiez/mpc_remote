@@ -1,0 +1,13 @@
+#!/bin/sh
+
+echo "Backing up old lircd.conf file..."
+sudo mv -f /etc/lirc/lircd.conf /etc/lirc/lircd_original.conf >/dev/null 2>&1
+echo "Copying new files..."
+sudo cp lircd.conf /etc/lirc/
+sudo cp lircrc /etc/lirc/
+sudo cp mpc_remote.py /usr/bin/
+echo "Installing systemd service..."
+sudo cp mpc_remote.service /lib/systemd/system/mpc_remote.service
+sudo systemctl enable mpc_remote.service
+sudo systemctl start mpc_remote.service
+echo "Done."
